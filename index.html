@@ -6,5 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank2Peer</title>
   </head>
-  <body></body>
+  <body>
+    <section class="top">
+      <p class="welcome-message">Log in to get started</p>
+      <img src="logo.png" alt="Logo" class="logo" />
+      <form class="login">
+        <input
+          type="text"
+          placeholder="User"
+          class="login-input login-input-user"
+        />
+        <input
+          type="text"
+          placeholder="4-digit PIN"
+          class="login-input login-input-pin"
+        />
+        <button class="btn-login">&rarr;</button>
+      </form>
+    </section>
+    <main class="application">
+      <!--CURRENT BALANCE SECTION-->
+      <section class="balance">
+        <div class="balance-label-message">
+          <p class="balance-label">Current Balance</p>
+          <p class="balance-date">As of <span>06/27/2000</span></p>
+        </div>
+        <p class="balance-value">$0000</p>
+      </section>
+
+      <!--MOVEMENTS AND OPERATIONS-->
+      <section class="movements-operations">
+        <div class="movements"></div>
+
+        <div class="operations">
+          <div class="operation operation-transfer">
+            <h2>Tranfer Money</h2>
+            <form>
+              <label>Transfer to</label>
+              <input type="text" class="form-input form-input-to" />
+              <label>Amount</label>
+              <input type="number" class="form-input form-input-amount" />
+              <button class="btn-transfer">&rarr;</button>
+            </form>
+          </div>
+          <div class="operation operation-request">
+            <h2>Request Money</h2>
+            <form>
+              <label>Request from</label>
+              <input type="text" class="form-input form-input-from" />
+              <label>Amount</label>
+              <input type="number" class="form-input form-input-amount" />
+              <button class="btn-request">&larr;</button>
+            </form>
+          </div>
+          <div class="operation operation-loan"></div>
+          <div class="operation operation-close"></div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
