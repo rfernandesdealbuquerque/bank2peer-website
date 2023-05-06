@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bank2Peer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="top">
@@ -21,7 +26,7 @@
           placeholder="4-digit PIN"
           class="login-input login-input-pin"
         />
-        <button class="btn-login">&rarr;</button>
+        <button class="btn-form btn-login">&rarr;</button>
       </form>
     </section>
     <main class="application">
@@ -38,31 +43,85 @@
       <section class="movements-operations">
         <div class="movements"></div>
 
+        <!--Operations-->
         <div class="operations">
           <div class="operation operation-transfer">
             <h2>Tranfer Money</h2>
-            <form>
+            <form class="form form-transfer">
               <label>Transfer to</label>
               <input type="text" class="form-input form-input-to" />
               <label>Amount</label>
               <input type="number" class="form-input form-input-amount" />
-              <button class="btn-transfer">&rarr;</button>
+              <button class="btn-form btn-transfer">&rarr;</button>
             </form>
           </div>
           <div class="operation operation-request">
             <h2>Request Money</h2>
-            <form>
-              <label>Request from</label>
+            <form class="form form-request">
+              <label class="form-label">Request from</label>
               <input type="text" class="form-input form-input-from" />
-              <label>Amount</label>
+              <label class="form-label">Amount</label>
               <input type="number" class="form-input form-input-amount" />
-              <button class="btn-request">&larr;</button>
+              <button class="btn-form btn-request">&larr;</button>
             </form>
           </div>
-          <div class="operation operation-loan"></div>
-          <div class="operation operation-close"></div>
+          <div class="operation operation-loan">
+            <h2>Request Bank Loan</h2>
+            <form class="form form-loan">
+              <label class="form-label">Amount</label>
+              <input type="number" class="form-input form-input-loan" />
+              <button class="btn-form btn-loan">&larr;</button>
+            </form>
+          </div>
+
+          <div class="operation operation-close">
+            <h2>Close my account</h2>
+            <form class="form form-close">
+              <label class="form-label">Confirm user</label>
+              <input type="text" class="form-input form-input-user" />
+              <label class="form-label">Confirm PIN</label>
+              <input
+                type="password"
+                maxlength="4"
+                class="form-input form-input-pin"
+              />
+              <button class="btn-form btn-close">&rarr;</button>
+            </form>
+          </div>
+        </div>
+
+        <!--MOVEMENTS-->
+        <div class="movements">
+          <div class="movements-row">
+            <div class="movements-type movements-type-deposit">2 deposit</div>
+            <div class="movements-date">3 days ago</div>
+            <div class="movements-value">4000€</div>
+          </div>
+          <div class="movements-row">
+            <div class="movements-type movements-type-withdrawal">
+              1 withdrawal
+            </div>
+            <div class="movements__date">24/01/2037</div>
+            <div class="movements__value">-378€</div>
+          </div>
         </div>
       </section>
+      <!--SUMMARY-->
+      <section class="summary">
+        <p class="summary-label">In</p>
+        <p class="summary-value summary-value-in">0000€</p>
+        <p class="summary-label">Out</p>
+        <p class="summary-value summary-value-out">0000€</p>
+        <p class="summary-label">Interest</p>
+        <p class="summary-value summary-value-interest">0000€</p>
+        <button class="btn-sort">&downarrow; SORT</button>
+      </section>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
