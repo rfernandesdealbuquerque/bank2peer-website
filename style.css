@@ -74,6 +74,8 @@ body {
   transition: all 1s;
 }
 
+/* movements styles */
+
 .movements-operations {
   display: flex;
   flex-direction: row;
